@@ -1,8 +1,0 @@
-<div class="modal-header"><h5 class="modal-title"><?= $edit ? 'Edit Pengguna' : 'Tambah Pengguna' ?></h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
-<div class="modal-body"><div class="row g-3">
-    <div class="col-12"><label class="form-label">Nama</label><input name="name" class="form-control" value="<?= e($edit['name'] ?? '') ?>" required></div>
-    <div class="col-12"><label class="form-label">Email</label><input type="email" name="email" class="form-control" value="<?= e($edit['email'] ?? '') ?>" required></div>
-    <div class="col-md-6"><label class="form-label">Role</label><select name="role" class="form-select"><option value="admin" <?= (($edit['role'] ?? '')==='admin')?'selected':'' ?>>Admin</option><option value="kaprodi" <?= (($edit['role'] ?? '')==='kaprodi')?'selected':'' ?>>Kaprodi</option><option value="keuangan" <?= (($edit['role'] ?? '')==='keuangan')?'selected':'' ?>>Keuangan</option></select></div>
-    <div class="col-md-6"><label class="form-label">Status</label><select name="status" class="form-select"><option value="aktif" <?= (($edit['status'] ?? '')==='aktif')?'selected':'' ?>>Aktif</option><option value="nonaktif" <?= (($edit['status'] ?? '')==='nonaktif')?'selected':'' ?>>Nonaktif</option></select></div>
-    <div class="col-12"><label class="form-label">Password <?= $edit ? '(kosongkan jika tidak diganti)' : '' ?></label><input type="password" name="password" class="form-control" placeholder="Default: role123, contoh admin123"></div>
-</div></div><div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button><button class="btn btn-primary">Simpan</button></div>
